@@ -15,9 +15,14 @@ public class MoodAnalyser {
     }
     public String analyseMood() throws MoodAnalysisException{
         try {
+UC2_ExceptionIfStringEmpty
+            if(message.equals("")) {
+                throw new Exception("The string is empty, please enter something");
+
             if(this.message.isEmpty()) {
                 analysedResult = "";
                 throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.MoodEmpty, "Mood must not be empty");
+ master
             }
             else if(message.toUpperCase().contains("SAD")) {
                 analysedResult = "SAD"; //if analyse is true sad will be stored
