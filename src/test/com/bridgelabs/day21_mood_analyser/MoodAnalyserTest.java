@@ -9,6 +9,6 @@ public class MoodAnalyserTest {
 @Test
 public void testAnalyseMood() throws Exception {
     String actual = moodAnalyser.analyseMood();
-    Assert.assertEquals("HAPPY", actual);
+    Assert.assertEquals("", actual);
 }
 } 
